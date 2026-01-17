@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ShoopCoff</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="body-form">
+    
+    <div class="form-container">
+        <h1>Cadastro</h1>
+        <div class="cadastro-inputs">
+            <input type="text" id="nomeCadastro" placeholder="Nome Completo">
+            <input type="text" id="usuarioCadastro" placeholder="Usuário">
+            <input type="password" id="senhaCadastro" placeholder="Senha">
+        </div>
+        <button onclick="criarNovoUsuario()">Criar Novo Usuário</button>
+        
+        <div class="footer-form">
+            <p>Já tem uma conta?</p>
+            <button class="btn-link" onclick="irPara('login.html')">Fazer Login</button>
+            <button class="btn-link" onclick="irPara('index.html')">voltar</button>
+        </div>
+    </div>
+
+    <script src="../js/cadastroUsuario.js", type="module"></script> 
+</body>
+</html>
