@@ -10,7 +10,7 @@ export async function executarRequisicao(requisicao) {
 }
 
 export async function irPara(pagina) {
-    window.location.href = `/front/paginas/${pagina}`
+    window.location.href = `/paginas/${pagina}`
 }
 
 export async function notificar(mensagem, eErro) {
