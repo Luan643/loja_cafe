@@ -5,13 +5,14 @@ export async function buscarProdutos(nome) {
         .then(res => res.json())
 }
 
-export async function criarProduto({ nome, preco }) {
+export async function criarProduto({ nome, preco, img }) {
     if (!nome || !preco) 
         throw 'Nome e preço do produto são obrigatórios'
 
     const produto = {
         nome,
-        preco
+        preco,
+        img
     }
 
     return fetch(`${BASE_URL}/produto/criar`, {

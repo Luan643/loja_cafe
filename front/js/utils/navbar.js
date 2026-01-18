@@ -44,8 +44,7 @@ export class NavBar {
             <h1 onclick="irPara('index.html')" class="logo">ShoopCoff</h1>
             ${esconderPesquisa ? '' : `
                     <div class="divPesquisar">
-                        <input class="inputPesquisar" type="text" id="inputPesquisar">
-                        <button class="nav-btn" id="butaoPesquisar" onclick="pesquisarProdutos()">Buscar</button>
+                        <input placeholder="Pesquisar produto" class="inputPesquisar" type="text" id="inputPesquisar">
                     </div>
                 `
             }

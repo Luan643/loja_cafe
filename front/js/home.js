@@ -32,6 +32,9 @@ async function start() {
         listaProdutos.innerHTML +=
             `<li class="produto-card">
                 <h3>${produtos[i].nome}</h3>
+                <div class="imagem-produto"> 
+                    <img src="${produtos[i].img? produtos[i].img: '../recursos/img/imagem_vazia.png'}" />
+                </div>
                 <p>R$ ${produtos[i].preco.toFixed(2)}</p>
                 <button id="botaoComprar" onclick="adicionarAoCarrinho('${produtos[i]._id}')">Comprar</button>
             </li>`

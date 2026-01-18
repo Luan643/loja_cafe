@@ -9,15 +9,16 @@ body {
     flex-wrap: wrap;
     justify-content: start;
     gap: 20px;
-    padding: 20px;
     list-style: none;
+    margin-top: 100px;
 }
 
 .produto-card {
+    box-sizing: border-box;
     background: white;
     padding: 15px;
     border-radius: 8px;
-    width: 200px;
+    flex-basis: calc(25% - 20px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -42,4 +43,25 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.imagem-produto {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(221, 221, 221);
+}
+
+.imagem-produto img {
+    height: 100%;
+     width: auto;
+    object-fit: contain;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }

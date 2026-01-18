@@ -11,6 +11,12 @@
 <body>
     <div class="container">
         <div id="criarProduto">
+            <div class="imagem" onclick="escolherImagem()">
+                <div class="imagem-pelicula">
+                    <img src="../recursos/img/cam.png">
+                </div>
+                <img src="../recursos/img/imagem_vazia.png" id="produto-img">
+            </div>
             <input type="text" id="nomeProduto" placeholder="Nome do Produto">
             <input type="number" id="precoProduto" placeholder="Preço (R$)">
             <button class="confirm-btn" onclick="criarNovoProduto()">Criar Produto</button>

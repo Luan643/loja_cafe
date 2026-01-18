@@ -1,5 +1,5 @@
 import { autenticar } from "./servicos/UsuarioServico.js"
-import { executarRequisicao, irPara } from "./Util.js"
+import { executarRequisicao, irPara } from "./util.js"
 
 async function login() {
     const usuario = document.getElementById("loginUsuario").value

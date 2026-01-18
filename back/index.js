@@ -1,19 +1,30 @@
 import express from "express"
 import cors from "cors"
-import connectDB from "./scr/connect/connectDB.js";
-import { HistoricoCarrinhoRotas } from "./scr/rotas/hitorico_rotas.js";
-import { UsuarioRotas } from "./scr/rotas/usuario_rotas.js";
-import { ProdutoRotas } from "./scr/rotas/produto_rotas.js";
-import { CarrinhoRotas } from "./scr/rotas/carrinho_rotas.js";
+import connectDB from "./src/connect/connectDB.js";
+import { HistoricoCarrinhoRotas } from "./src/rotas/hitorico_rotas.js";
+import { UsuarioRotas } from "./src/rotas/usuario_rotas.js";
+import { ProdutoRotas } from "./src/rotas/produto_rotas.js";
+import { CarrinhoRotas } from "./src/rotas/carrinho_rotas.js";
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express()
 app.use(cors())
-app.use(express.json())
+app.use(express.json({limit: '10mb'}))
 
 
 async function start() {
 
     await connectDB()
+
+    app.use(express.static(path.join(__dirname, '../front')))
+
+    app.get('/', (req, res) => {
+        res.redirect('/paginas/index.html')
+    })
 
     app.use('/usuario', UsuarioRotas)
     app.use('/produto', ProdutoRotas)

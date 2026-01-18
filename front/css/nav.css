@@ -21,7 +21,10 @@
 }
 
 .divPesquisar #inputPesquisar {
+    box-sizing: border-box;
     width: 300px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .navBar button {
