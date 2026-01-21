@@ -1,9 +1,12 @@
 
 # Coffee Shop
 
-Projeto simples com HTML, CSS, JS e NodeJS, para praticar programação. O projeto contém uma servidor com NodeJS com Express e MongoDB. Frontend feito em HTML, CSS e JS. 
+<img heigth="200px" width="200px" src="./latte-art.png" /> 
 
-Funcionalidades:
+## Descrição
+Projeto simples com HTML, CSS, JS e NodeJS, para praticar programação. O projeto contém um servidor com NodeJS com Express e MongoDB. Frontend feito em HTML, CSS e JS.
+
+## Funcionalidades:
 
 * Cadastrar produto: Nome produto, valor, imagem
 * Listagem de produtos, card com todas as informações
@@ -13,24 +16,44 @@ Funcionalidades:
 * Login
 * Áreas restrita com acesso apenas a pessoa logadas
 
+</br>
+</br>
 
-## Como Executar o Projeto
+## Execução do Projeto
+</br>
 
 ### Máquina Local
 
-#### Requisitos: NodeJS e MongoDB instalados
-#### Passos para execução:
-* Entrar na pasta back do projeto
-* Executar via terminal *npm install*
-* Executar via terminal npm start
-* Abrir no navegador *http://localhost:3000*
+#### Requisitos: 
+<div style="display: flex; gap: 20px; flex-direction: column;">
+    <a href="https://nodejs.org/pt/download" style="display: flex; gap: 20px; align-items: center;">
+        <img heigth="40px" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" /> 
+            <div>NodeJS</div>
+    </a>
+    <a href="https://nodejs.org/pt/download" style="display: flex; gap: 20px; align-items: center;">
+        <img heigth="40px" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" /> 
+            <div>Mongo DB</div>
+    </a>
+</div>
+</br>
 
+#### Executando o Projeto:
+* Entrar na pasta <b>back</b> do projeto
+* Executar via terminal <b>npm install</b>
+* Executar via terminal <b>npm start</b>
+* Abrir no navegador <b>http://localhost:3000</b>
+
+</br>
 
 ### Docker
-#### Requisitos: Docker instalado
+#### Requisitos:
+<a href="https://nodejs.org/pt/download" style="display: flex; gap: 20px; align-items: center;">
+    <img heigth="40px" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" /> 
+        <div>Docker</div>
+</a>
 
 #### Passos para execução:
-* Entrar na pasta principal do projeto onde tem o *Dockerfile*
-* Executar o comando para construir a imagem: *docker build -t coffee-shop .*
-* Executar o comando para rodar um container com a imagem: *docker run -p 3000:3000 coffee-shop*
-* Abrir no navegador *http://localhost:3000*
+* Entrar na pasta principal do projeto onde tem o <b>Dockerfile</b>
+* Executar o comando para construir a imagem: <b>docker build -t coffee-shop .</b>
+* Executar o comando para rodar um container com a imagem: <b>docker run -p 3000:3000 coffee-shop</b>
+* Abrir no navegador <b>http://localhost:3000</b>
