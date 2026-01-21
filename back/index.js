@@ -7,6 +7,7 @@ import { ProdutoRotas } from "./src/rotas/produto_rotas.js";
 import { CarrinhoRotas } from "./src/rotas/carrinho_rotas.js";
 import path from 'path'
 import { fileURLToPath } from 'url';
+import { criarDados } from "./src/connect/criarDadosIniciais.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,6 +20,7 @@ app.use(express.json({limit: '10mb'}))
 async function start() {
 
     await connectDB()
+    await criarDados()
 
     app.use(express.static(path.join(__dirname, '../front')))
 
