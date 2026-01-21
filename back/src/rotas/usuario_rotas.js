@@ -16,7 +16,8 @@ rotas.post('/login', async function (req, res) {
 
 rotas.post("/", async function (req, res) {
     try {
-        const usuarioCriado = await usuarioServico.criarUsuario(req.body)
+        const usuario = {...req.body, eAdmin: undefined}
+        const usuarioCriado = await usuarioServico.criarUsuario(usuario)
         usuarioCriado.senha = undefined
         res.status(201).send(usuarioCriado)
     } catch (erro) {

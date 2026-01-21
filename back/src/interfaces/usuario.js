@@ -12,7 +12,10 @@ const usuarioSchema = new Schema({
     senha: {
         type: String,
         required: true, 
-    }    
+    },
+    eAdmin: {
+        type: Boolean
+    }  
 })
 
 export const UsuarioModel = model('usuario', usuarioSchema)

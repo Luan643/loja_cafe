@@ -12,7 +12,7 @@ export class HistoricoCarrinhoRepositorio {
     }
 
     async buscarHistorico(usuarioId) {
-        return await HistoricoCarrinhoModel.findOne({ usuario: usuarioId })
+        return (await HistoricoCarrinhoModel.findOne({ usuario: usuarioId }))
     }
 
     async listaProdutosComprados(usuarioId) {
